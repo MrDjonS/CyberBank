@@ -1,21 +1,21 @@
 @font-face {
-  font-family: "Roboto";
-  src: local("Roboto-Light"), url("./fonts/Roboto-Light.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: local('Roboto-Light'), url('./fonts/Roboto-Light.ttf') format('truetype');
   font-weight: 300;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: local("Roboto-Regular"),
-    url("./fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: local('Roboto-Regular'),
+    url('./fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Archangelsk";
-  src: local("Archangelsk"), url("./fonts/Archangelsk.ttf") format("truetype");
+  font-family: 'Archangelsk';
+  src: local('Archangelsk'), url('./fonts/Archangelsk.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
 }
@@ -42,28 +42,45 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
-  min-width: var(--mobile);
   padding: 0 12px;
   margin: 0 auto;
+  width: 90%;
+
+@media (max-width:1020px) {
+  padding: 0 100px;
+  width: 60%;
+  max-width: 1920px;
+  
+}
 }
 
 .header {
-  background-image: url(./images/fon.jpg);
+  background-image: url(../images/fon.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 760px;
-  display: flex;flex-direction: column;
+  display: flex;
+  flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
 
+@media (min-width:500px) {
+  background-image: url(../images/fon.jpg);
+  
 }
+@media (min-width:780px) {
+  background-image: url(../images/fon2.jpg);
+  
+}
+}
+
 .nav {
-  max-width: 290px;
+  min-width: 290px;
   width: 100%;
   padding-top: 20px;
   display: flex;
@@ -73,31 +90,93 @@ body {
   margin: 0 auto;
 
   &__icons {
-    width: 70%;
     display: flex;
     justify-content: space-between;
+    min-width: 300px;
+    width: 100%;
     align-items: center;
+
+    @media (min-width: 500px) {
+      width: 65%;
+    }
+  }
+
+  &__img {
+    width: 200px;
   }
 }
 
-.square {
-padding: 30px 24px;
-background-color: var(--bg-yellow);
-margin-bottom: -50px;
-display: flex;
-flex-direction: column;
-align-items: center;
-clip-path: polygon(15% 1%, 100% 0, 100% 85%, 88% 100%, 0% 100%, 0% 15%);
+.nav {
+  padding-top: 20px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 
-&__title{
-font-family: "Archangelsk";
-font-weight: 400;
-font-size: 30px;
-text-align: center;
-color: #000;
-margin-bottom: 25px;
+  @media (min-width: 780px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+
+    @media (min-width: 500px) {
+      width: 30px;
+      height: 30px;
+    }
+    @media (min-width: var(--tablet)) {
+      width: 35px;
+      height: 35px;
+    }
+  }
+&__logo {
+  width: 200px;
+  height: 50px;
+  @media(min-width:780xp) {
+    width: 300px;
+    height: 75px;
+  }
 }
-&__btn{
+
+}
+
+
+
+
+.square {
+  padding: 30px 24px;
+  background-color: var(--bg-yellow);
+  margin-bottom: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  clip-path: polygon(15% 1%, 100% 0, 100% 85%, 88% 100%, 0% 100%, 0% 15%);
+
+  @media (min-width: 780px) {
+    max-width: 624px;
+    padding: 70px;
+    width: 100%;
+    margin-right: 36px;
+    margin-bottom: 0;
+  }
+  &__title {
+    font-family: 'Archangelsk';
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 25px;
+
+    @media (min-width: 780px) {
+      font-size: 62px;
+      text-align: left;
+    }
+  }
+  &__btn {
     background: none;
     border: none;
     padding: 10px 50px;
@@ -108,10 +187,14 @@ margin-bottom: 25px;
     color: #f8f200;
     background-color: var(--bg-black);
     cursor: pointer;
-    transition: opocity, 0,5s;
+    transition: opocity, 0, 5s;
     &:hover {
-        opacity: 0.8;
+      opacity: 0.8;
     }
 
-}
+    @media (min-width: 720px) {
+      font-size: 24px;
+      width: 290px;
+    }
+  }
 }
