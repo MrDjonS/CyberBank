@@ -63,6 +63,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
+  margin-bottom: 120px;
 }
 @media (min-width: 500px) {
   .header {
@@ -197,4 +198,36 @@ body {
     font-size: 24px;
     width: 290px;
   }
+}
+
+.info {
+  margin-bottom: 25px;
+}
+.info__title {
+  font-family: "Archangelsk";
+  font-weight: 400;
+  font-size: 30px;
+  color: var(--text-primary);
+}
+.info__desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: var(--text-secondary);
+  margin-bottom: 120px;
+}
+.info .text-blue {
+  font-weight: 700;
+  color: var(--text-blue);
+}
+.info .images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.info .images img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
