@@ -302,10 +302,11 @@ body {
 }
 
 .form-images {
+    margin-top: 60px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     &-one {
         background-image: url(./images/image-one-mobile.png );
         background-position: center;
@@ -352,7 +353,10 @@ body {
     outline: 0;
     outline-offset: 0;
 }
-
+.ah {
+    position: absolute;
+    margin-top: -55px;
+}
 .download {
     margin-top: 35px;
     width: 100%;

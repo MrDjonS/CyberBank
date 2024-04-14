@@ -299,6 +299,7 @@ body {
 }
 
 .form-images {
+  margin-top: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -350,6 +351,11 @@ body {
 :focus {
   outline: 0;
   outline-offset: 0;
+}
+
+.ah {
+  position: absolute;
+  margin-top: -55px;
 }
 
 .download {
