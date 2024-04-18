@@ -1,21 +1,22 @@
 @font-face {
-  font-family: "Roboto";
-  src: local("Roboto-Light"), url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: local('Roboto-Light'),
+    url('../fonts/Roboto-Light.ttf') format('truetype');
   font-weight: 300;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: local("Roboto-Regular"),
-    url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: local('Roboto-Regular'),
+    url('../fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Archangelsk";
-  src: local("Archangelsk"), url("../fonts/Archangelsk.ttf") format("truetype");
+  font-family: 'Archangelsk';
+  src: local('Archangelsk'), url('../fonts/Archangelsk.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
 }
@@ -28,7 +29,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
 }
 
@@ -166,7 +167,7 @@ body {
   }
 
   &__title {
-    font-family: "Archangelsk";
+    font-family: 'Archangelsk';
     font-weight: 400;
     font-size: 30px;
     text-align: center;
@@ -200,7 +201,7 @@ body {
     font-weight: 400;
     font-size: 30px;
     color: var(--text-primary);
-    font-family: "Archangelsk";
+    font-family: 'Archangelsk';
     margin-bottom: 25px;
 
     @media (min-width: 500px) {
@@ -251,16 +252,15 @@ body {
     padding: 0 36px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
+
     grid-template-areas:
-      "img1 img2"
-      "img3 img3";
+      'img1 img2'
+      'img3 img3';
   }
 
   @media (min-width: 1024px) {
     max-width: 1280px;
     margin: 0 auto;
-    
   }
 }
 
@@ -282,7 +282,7 @@ body {
   position: relative;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: -50px;
     display: block;
@@ -295,7 +295,7 @@ body {
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -70px;
     display: block;
@@ -311,7 +311,7 @@ body {
     font-weight: 400;
     font-size: 30px;
     color: #fff;
-    font-family: "Archangelsk";
+    font-family: 'Archangelsk';
     margin-bottom: 25px;
   }
 
@@ -327,8 +327,8 @@ body {
   margin-top: 25px;
 
   @media (min-width: 768px) {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -414,7 +414,7 @@ label {
 }
 
 .checkbox + label::before {
-  content: "";
+  content: '';
   display: block;
   border: 1px solid #777;
   width: 14px;
@@ -425,7 +425,7 @@ label {
 }
 
 .checkbox:checked + label::after {
-  content: "";
+  content: '';
   display: block;
   background-image: url(../images/tick.svg);
   background-position: center;
@@ -458,15 +458,14 @@ label {
   position: absolute;
   top: -50px;
   left: 0;
-   
+
   @media (min-width: 768px) {
-    
-left: 20%;
-top: 30px;
-width: 132px;
-height: 132px;
+    left: 45%;
+    top: 30px;
+    width: 132px;
+    height: 132px;
+  }
 }
- }
 .form-desc {
   @media (min-width: 768px) {
     max-width: 460px;
