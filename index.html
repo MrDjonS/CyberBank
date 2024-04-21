@@ -162,13 +162,22 @@
       <main>
         <section class="deep">
           <div class="container">
+            <div class="display__wrapper"> 
             <div class="display">
-              <img src="./images/display-mobile.png" alt="" />
-              <div class="display__icons">
-                <img src="./images/hp.svg" alt="" />
-                <img src="./images/ix.svg" alt="" />
-                <img src="./images/logo.svg" alt="" />
+             <picture>
+                <source media="(min-width:1024px)"
+                srcset="./images/monitor-3.png">
+                <source media="(min-width: 780px)" srcset="./images/monitor-2.png"
+                >
+                <source media="(min-width:320px)" srcset="./images/display-mobile.png">
+                <img src="./images/display-mobile.png" alt="monitor">
+             </picture>
+
+
               </div>
+<div class="display__icons"> 
+
+</div>
               <div class="deep__wrapper">
                 <h3 class="display__title">Полное погружение вместе с HP</h3>
                 <p class="display__desc">
@@ -191,6 +200,7 @@
                 <button class="deep__btn">Подробнее</button>
               </div>
             </div>
+        </div>
           </div>
         </section>
       </main>
